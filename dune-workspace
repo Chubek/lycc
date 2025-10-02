@@ -1,0 +1,14 @@
+(lang dune 3.11)
+
+(profile dev
+ (flags (:standard -warn-error -A)))
+
+(profile release
+ (flags (:standard -O3))
+ (ocamlopt_flags (:standard -O3)))
+
+(profile bench
+ (flags (:standard -O3 -unbox-closures))
+ (ocamlopt_flags (:standard -O3 -unbox-closures)))
+
+(context (default))
