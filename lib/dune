@@ -1,0 +1,12 @@
+(include_subdirs unqualified)
+
+(library
+ (public_name lycc.lib)
+ (name lycc)
+ (modules scanner parser ast canon cfg ssa instr)
+ (libraries
+  ocamlgraph
+  core
+  fmt
+  logs))
+

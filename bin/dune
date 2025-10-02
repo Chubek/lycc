@@ -1,0 +1,4 @@
+(executable
+  (name lycc)
+  (modules interface cli)
+  (libraries lycc.lib))
