@@ -1,12 +1,23 @@
 (include_subdirs unqualified)
 
 (library
- (public_name lycc.lib)
- (name lycc)
- (modules scanner parser ast canon cfg ssa instr)
+ (public_name lycc)
+ (name lycc_lib)
  (libraries
+  angstrom
   ocamlgraph
   core
   fmt
-  logs))
-
+  logs)
+ (preprocess
+  (pps
+   ppx_deriving.show
+   ppx_deriving.eq
+   ppx_sexp_conv
+   ppx_compare
+   ppx_hash
+   ppx_let
+   ppx_inline_test
+   ppx_expect))
+ (instrumentation
+  (backend bisect_ppx)))
