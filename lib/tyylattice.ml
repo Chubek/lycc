@@ -3,8 +3,8 @@ module TyyLattice = struct
     type t =
       { uid: tyy_id
       ; base: tyy_base
-      ; qual: tyy_qual
-      ; indir: int
+      ; qual: tyy_qual option
+      ; ptr: tyy_ptr option
       }
 
     and tyy_base =
@@ -57,6 +57,10 @@ module TyyLattice = struct
       | Volatile
       | Restrict
       | Atomic
+
+    and tyy_ptr =
+      | Immutable
+      | Mutable
 
     and tyy_id = int
   end
