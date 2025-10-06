@@ -66,5 +66,10 @@ module TyyLattice = struct
       | Mutable
 
     and tyy_id = int
+
+    let compare t1 t2 = Int.compare t1.uid t2.uid
+    let hash t = Hashtbl.hash t.uid
+    let equal t1 t2 = (=) t1.uid t2.uid
   end
+
 end
