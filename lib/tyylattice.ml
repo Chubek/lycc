@@ -26,10 +26,13 @@ module TyyLattice = struct
       | Complex128
 
     and tyy_comp =
-      | Aggregate of { elt_tyy: tyy_id 
-                     ; dims: (int option * bool * bool * bool * bool) list
-                     ; vla: string list
-                     }
+      | Array of { elt_tyy: tyy_id 
+                 ; dims: (int option * bool * bool * bool * bool) list
+                 ; vla: string list
+                 }
+      | LUT of { key_tyy: tyy_id
+               ; val_tyy: tyy_id
+               }
       | Sum of { tag_name: string
                ; join_enum: tyy_id
                ; join_union: tyy_id
