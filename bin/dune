@@ -1,5 +1,4 @@
 (executable
- (public_name lycc)
- (name lycc_main)
- (libraries lycc_lib cmdliner logs.cli logs.fmt fmt.cli fmt.tty)
- (preprocess (pps ppx_let)))
+  (name lycc)
+  (modules cli interface entrypoint)
+  (libraries lycc.lib))
