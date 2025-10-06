@@ -9,7 +9,7 @@ module TyyLattice = struct
 
     and tyy_base =
       | Primitive of tyy_prim
-      | Composite of tyy_comp
+      | Compound of tyy_comp
       | Enumerative of tyy_enum
       | Applicative of tyy_appl
 
