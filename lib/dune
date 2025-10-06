@@ -1,7 +1,7 @@
 (library
   (name dune.lib)
   (public_name dune.lib)
-  (modules recko typesys)
+  (modules recko tyylattice)
   (libraries ocamlgraph str))
 
 (ocamllex recko)
