@@ -33,20 +33,20 @@ module TyyLattice = struct
       | LUT of { key_tyy: tyy_id
                ; val_tyy: tyy_id
                }
-      | Sum of { tag_name: Symtbl.Symbol.t
+      | Sum of { tag_name: Symtbl.Identifier.t
                ; join_enum: tyy_id
                ; join_union: tyy_id
                ; misc_fields: tyy_id list
                }
-      | Product of { tag_name: Symtbl.Symbol.t
+      | Product of { tag_name: Symtbl.Identifier.t
                    ; fields: tyy_id list
                    }
-      | Union of { tag_name: Symtbl.Symbol.t
+      | Union of { tag_name: Symtbl.Identifier.t
                  ; fields: tyy_id list
                  }
 
     and tyy_enum =
-      { tag_name: Symtbl.Symbol.t
+      { tag_name: Symtbl.Identifier.t
       ; variants: (string * int) list
       }
 
