@@ -15,7 +15,7 @@ module Symtbl = struct
       | DatatypeTag
       | FormalParam
       | ActualParam
-      | EnumConsit
+      | EnumConst
 
     and ident_id = int
 
