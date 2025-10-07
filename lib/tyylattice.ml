@@ -4,7 +4,7 @@ module TyyLattice = struct
       { uid: tyy_id
       ; base: tyy_base
       ; qual: tyy_qual option
-      ; ptr: tyy_ptr option
+      ; ptr: tyy_ptr list
       }
 
     and tyy_base =
